@@ -1,0 +1,17 @@
+
+interface GigabitEthernet0/0
+ ip address 10.0.0.1 255.255.255.192
+ 
+interface GigabitEthernet0/1
+ ip address 10.0.0.114 255.255.255.252
+ 
+interface GigabitEthernet0/2
+ ip address 10.0.0.117 255.255.255.252
+ 
+interface Vlan1
+ no ip address
+ shutdown
+
+ip classless
+ip route 0.0.0.0 0.0.0.0 GigabitEthernet0/2 
+
